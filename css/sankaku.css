@@ -1,0 +1,44 @@
+body {
+    background-color: #FEFFF9;
+    font-size: 10pt; 
+    font-family: sans-serif; 
+    margin: 0; 
+}
+
+h1 { color: navy;  }
+h2 { color: navy;  }
+h3 { color: navy; font-size: 120%; }
+
+a { color: blue; 
+    text-decoration: none;
+}
+
+a:hover {
+	color: rgb(153, 153, 255);
+}
+
+p.pre {
+    white-space: pre;
+}
+table.border {
+	/* Zou niet werken in IE, gebruik <table cellspacing="0"> */
+	border-collapse: collapse;
+
+	border: 1px solid rgb(0, 0, 102);
+
+	/* font-size:  12px; */
+	line-height: 20px;
+}
+
+td.border {
+	border: 1px solid rgb(0, 0, 102);
+    text-align: left;
+	vertical-align: top;
+
+	/* margin-left: 10px; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+sup { color: red; font-family: monospace; font-size: 110%; !important; }
+span.legenda { color: red; font-family: monospace; font-weight: bold; font-size: 140%; !important; }
