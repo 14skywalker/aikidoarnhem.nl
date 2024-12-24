@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/Layout.astro';
+import Image from '~/components/common/Image.astro';
 import Header from '~/components/widgets/Header.astro';
 import Footer from '~/components/widgets/Footer.astro';
 
@@ -19,7 +20,17 @@ const { metadata } = Astro.props;
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
-    <slot />
+    <div class="flex w-full">
+      <div class="w-10"></div>
+      <Image
+        class="hidden md:block"
+        src='~/assets/images/side-logo.png'
+        alt="tbd"
+      />
+      <div>
+        <slot />
+      </div>
+    </div>
   </main>
   <slot name="footer">
     <Footer {...footerData} />
