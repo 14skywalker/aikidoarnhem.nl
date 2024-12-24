@@ -20,13 +20,15 @@ const { metadata } = Astro.props;
     <Header {...headerData} isSticky showRssFeed showToggleTheme />
   </slot>
   <main>
-    <div class="flex w-full">
-      <div class="w-10"></div>
-      <Image
-        class="hidden md:block"
-        src='~/assets/images/side-logo.png'
-        alt="tbd"
-      />
+    <div class="flex flex-row">
+      <div class="w-0 md:w-10"></div>
+      <div class="w-0 md:w-80">
+        <Image
+          class="hidden md:block sticky top-20"
+          src='~/assets/images/side-logo.png'
+          alt="logo zijkant"
+        />
+      </div>
       <div>
         <slot />
       </div>
