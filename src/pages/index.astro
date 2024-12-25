@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -178,59 +179,68 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Meer over aikido"
+    subtitle="Ontdek alles over aikido en onze school."
+    tagline="verder"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Betekenis',
+        description: "Aikido komt uit Japan; wat betekent het precies?",
+        icon: 'flat-color-icons:graduation-cap',
+        href: getPermalink('/services')
       },
       {
-        title: 'Heros',
+        title: 'Geschiedenis',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          "Meer over de oorsprong en de grondlegger van Aikdo.",
+        icon: 'flat-color-icons:film-reel',
+        href: getPermalink('/services')
       },
       {
-        title: 'Features',
+        title: 'Kinderen',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+          'Hoe geschikt is deze vechtkunst voor kinderen?',
+        icon: 'flat-color-icons:conference-call',
+        href: getPermalink('/services')
       },
       {
-        title: 'Content',
+        title: 'Leraren',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+          "Lees meer over de leraren van onze school.",
         icon: 'flat-color-icons:business-contact',
+        href: getPermalink('/services')
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Lestijden',
+        description:
+          'Een overzicht van de lestijden voor de verschillende locaties.',
+        icon: 'flat-color-icons:advertising',
+        href: getPermalink('/services')
+      },
+      {
+        title: 'Locaties',
+        description: 'Google maps voor onze dojo\'s in Arnhem en Wageningen.',
+        icon: 'flat-color-icons:home',
+        href: getPermalink('/services')
+      },
+      {
+        title: 'Inschrijven',
+        description: 'Hier vind je onze pagina met inschrijfformulier.',
+        icon: 'flat-color-icons:voice-presentation',
+        href: getPermalink('/services')
+      },
+      {
+        title: 'Lesgeld',
+        description:
+          'De draaien op vrijwilligers en vragen lesgeld voor zaalhuur en wat afschrijvingen.',
+        icon: 'flat-color-icons:currency-exchange',
+        href: getPermalink('/services')
+      },
+      {
+        title: 'Kalender',
+        description: "Bekijk onze vaste activeiten en extra evenementen.",
+        icon: 'flat-color-icons:calendar',
+        href: getPermalink('/calendar')
       },
     ]}
   >
@@ -294,10 +304,10 @@ const metadata = {
 
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Beoefenaars', amount: '1mln+' },
+      { title: 'Nederland', amount: '10.000+' },
+      { title: 'Landen', amount: '130+' },
+      { title: 'Stijlen', amount: '20-30' },
     ]}
   />
 
@@ -307,20 +317,18 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
+        text: 'Start nu',
+        href: '#steps',
         icon: 'tabler:download',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Aikido&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">bij Sankaku</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      De beste tijd om met aikido te beginnen is nu.<br class="hidden md:inline" />Wacht niet langer!
     </Fragment>
   </CallToAction>
 </Layout>

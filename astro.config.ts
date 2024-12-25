@@ -34,6 +34,11 @@ export default defineConfig({
       include: {
         tabler: ['*'],
         'flat-color-icons': [
+          'conference-call',
+          'home',
+          'film-reel',
+          'calendar',
+          'graduation-cap',
           'template',
           'gallery',
           'approval',
