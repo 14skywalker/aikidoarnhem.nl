@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { getPermalink } from '~/utils/permalinks';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -12,6 +11,8 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import FeaturesList from './features.astro';
+
 
 const metadata = {
   title: 'Aikidoschool Sankaku Arnhem/Wageningen',
@@ -27,10 +28,10 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Proeflessen',
-        href: '#steps',
+        href: '#proefles',
         icon: 'tabler:download',
       },
-      { text: 'Ontdek meer', href: '#features' },
+      { text: 'Ontdek meer', href: '#voordelen' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'Aikido Hero Image' }}
   >
@@ -57,7 +58,7 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
+    id="voordelen"
     tagline="Voordelen"
     title="Dit biedt onze aikidoschool"
     subtitle="Onze Aikido-school biedt een inspirerende omgeving waar je fysieke kracht, mentale balans en zelfvertrouwen ontwikkelt door traditionele technieken en moderne inzichten te combineren. Onder begeleiding van ervaren instructeurs leer je jezelf te verdedigen, harmonie te vinden en sterker in het leven te staan."
@@ -144,7 +145,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id="steps"
+    id="proefles"
     title="Ontdek de magische wereld van winnen zonder vechten!"
     items={[
       {
@@ -176,78 +177,9 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features list ************** -->
 
-  <Features2
-    title="Meer over aikido"
-    subtitle="Ontdek alles over aikido en onze school."
-    tagline="verder"
-    items={[
-      {
-        title: 'Betekenis',
-        description: "Aikido komt uit Japan; wat betekent het precies?",
-        icon: 'flat-color-icons:graduation-cap',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Geschiedenis',
-        description:
-          "Meer over de oorsprong en de grondlegger van Aikdo.",
-        icon: 'flat-color-icons:film-reel',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Kinderen',
-        description:
-          'Hoe geschikt is deze vechtkunst voor kinderen?',
-        icon: 'flat-color-icons:conference-call',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Leraren',
-        description:
-          "Lees meer over de leraren van onze school.",
-        icon: 'flat-color-icons:business-contact',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Lestijden',
-        description:
-          'Een overzicht van de lestijden voor de verschillende locaties.',
-        icon: 'flat-color-icons:advertising',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Locaties',
-        description: 'Google maps voor onze dojo\'s in Arnhem en Wageningen.',
-        icon: 'flat-color-icons:home',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Inschrijven',
-        description: 'Hier vind je onze pagina met inschrijfformulier.',
-        icon: 'flat-color-icons:voice-presentation',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Lesgeld',
-        description:
-          'We draaien op vrijwilligers en vragen lesgeld voor de zaalhuur en de matten.',
-        icon: 'flat-color-icons:currency-exchange',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Kalender',
-        description: "Bekijk onze vaste activeiten en extra evenementen.",
-        icon: 'flat-color-icons:calendar',
-        href: getPermalink('/calendar')
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <FeaturesList/>
 
   <!-- HighlightedPosts Widget ******* -->
 
@@ -318,7 +250,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Start nu',
-        href: '#steps',
+        href: '#proefles',
         icon: 'tabler:download',
       },
     ]}

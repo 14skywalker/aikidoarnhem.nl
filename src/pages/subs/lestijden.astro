@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import FeaturesList from '../features.astro';
+const metadata = {
+  title: 'Lestijden',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Titel</h3>
+      
+    </Fragment>
+  </Content>
+
+  <FeaturesList/>
+</Layout>

@@ -1,0 +1,75 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import { getPermalink } from '~/utils/permalinks';
+---  
+
+<Features2
+title="Meer over aikido"
+subtitle="Ontdek alles over aikido en onze school."
+tagline="verder"
+items={[
+    {
+    title: 'Betekenis',
+    description: "Aikido komt uit Japan; wat betekent het precies?",
+    icon: 'flat-color-icons:graduation-cap',
+    href: getPermalink('/subs/betekenis')
+    },
+    {
+    title: 'Geschiedenis',
+    description:
+        "Meer over de oorsprong en de grondlegger van Aikdo.",
+    icon: 'flat-color-icons:film-reel',
+    href: getPermalink('/subs/geschiedenis')
+    },
+    {
+    title: 'Kinderen',
+    description:
+        'Hoe geschikt is deze vechtkunst voor kinderen?',
+    icon: 'flat-color-icons:conference-call',
+    href: getPermalink('/subs/kinderen')
+    },
+    {
+    title: 'Leraren',
+    description:
+        "Lees meer over de leraren van onze school.",
+    icon: 'flat-color-icons:business-contact',
+    href: getPermalink('/subs/leraren')
+    },
+    {
+    title: 'Lestijden',
+    description:
+        'Een overzicht van de lestijden voor de verschillende locaties.',
+    icon: 'flat-color-icons:advertising',
+    href: getPermalink('/subs/lestijden')
+    },
+    {
+    title: 'Locaties',
+    description: 'Google maps voor onze dojo\'s in Arnhem en Wageningen.',
+    icon: 'flat-color-icons:home',
+    href: getPermalink('/subs/locaties')
+    },
+    {
+    title: 'Inschrijven',
+    description: 'Hier vind je onze pagina met inschrijfformulier.',
+    icon: 'flat-color-icons:voice-presentation',
+    href: getPermalink('/services')
+    },
+    {
+    title: 'Lesgeld',
+    description:
+        'We draaien op vrijwilligers en vragen lesgeld voor de zaalhuur en de matten.',
+    icon: 'flat-color-icons:currency-exchange',
+    href: getPermalink('/services')
+    },
+    {
+    title: 'Kalender',
+    description: "Bekijk onze vaste activeiten en extra evenementen.",
+    icon: 'flat-color-icons:calendar',
+    href: getPermalink('/calendar')
+    },
+]}
+>
+<Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Features2>

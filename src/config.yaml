@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: 'Aikidoschool Sankaku'
-    template: '%s — AstroWind'
+    template: '%s — aikido'
   description: "School voor Aikido in Arnhem en Wageningen"
   robots:
     index: true

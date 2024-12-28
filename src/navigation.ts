@@ -2,37 +2,24 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    
     {
       text: 'Proefles',
       links: [
         {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Proefles',
+          href: getPermalink('/#proefles'),
         },
         {
-          text: 'Services',
-          href: getPermalink('/services'),
+          text: 'Lestijden',
+          href: getPermalink('/subs/lestijden'),
         },
         {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
+          text: 'Locaties',
+          href: getPermalink('/subs/locaties'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          text: 'Leraren',
+          href: getPermalink('/subs/leraren'),
         },
       ],
     },
@@ -40,28 +27,20 @@ export const headerData = {
       text: 'Aanmelden',
       links: [
         {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
+          text: 'Aanmelden',
+          href: getPermalink('/aanmelden'),
         },
         {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
+          text: 'Lesgeld',
+          href: getPermalink('/aanmelden#lesgeld'),
         },
         {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
+          text: 'Inschrijven',
+          href: getPermalink('/landing/inschrijven'),
         },
         {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
+          text: 'Opzeggen',
+          href: getPermalink('/landing/opzeggen'),
         },
       ],
     },

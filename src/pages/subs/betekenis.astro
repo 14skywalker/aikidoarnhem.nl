@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import FeaturesList from '../features.astro';
+const metadata = {
+  title: 'Betekenis',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Het woord Aikido</h3>
+      Aikido wordt in het Japans geschreven met drie tekens, Ai, Ki en Do. Vaak wordt het vertaald als ai=harmonie, ki=energie en do=weg, dus ‘de weg om harmonisch met de energie van jezelf en de ander om te gaan’. Het blijkt echter iets ingewikkelder te zijn. 'Aiki' is een Japans woord, afkomstig uit de krijgskunsten, dat met twee tekens geschreven wordt. Het betekende vroeger zoiets als: gelijk worden aan je partner. In een krijgskunst is dat niet heel handig: als je per definitie zacht reageert als je partner zacht aanvalt, of hard reageert als je partner hard aanvalt, dan ben je vrij voorspelbaar...O sensei, de grondlegger van het aikido, heeft die betekenis wat verruimd in de zin van: éénworden met je partner. Je hebt geen tegenstander, en je kunt pas goed op de ander reageren als beider bewegingen eenworden. Daar komt nog bij, dat het eerste teken, Ai, in het Japans klinkt als 'liefde,compassie' in de zin van liefde voor al wat leeft en bestaat. Dat vond o-sensei wel een mooie bijkomstigheid, zodat hij wel tevreden was met de term aikido. Zelf vond hij het helemaal niet nodig zijn bewegingen een naam te geven, maar na lang aandringen van zijn leerlingen kon hij hier wel mee accoord gaan...
+    </Fragment>
+
+  </Content>
+
+  <FeaturesList/>
+</Layout>

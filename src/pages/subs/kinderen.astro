@@ -1,0 +1,42 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import FeaturesList from '../features.astro';
+const metadata = {
+  title: 'Kinderen',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Wat is aikido?</h3>
+      Wat is dat nou weer? Nee, je kunt het niet eten! Aikido is een Japanse sport. Het lijkt een klein beetje op judo, maar echt maar een klein beetje. Je draagt net als bij judo een judopak, je traint op blote voeten op een mat, en je leert rollen en vallen. Verder lijkt aikido alleen maar op aikido!
+In aikido zijn er geen wedstrijden. Dat lijkt misschien jammer, want dan kan je nooit winnen. Maar bekijk het eens van de andere kant: je kunt ook nooit verliezen! Je leert allerlei technieken die je met zijn tweeen uit moet voeren. De een valt aan, de ander voert de techniek uit. Van te voren spreek je af wie er aanvalt, en met wat voor soort aanval. Dat klinkt gevaarlijker dan het is, want iemand bij de pols vastpakken noemen we bij aikido al een aanval! Maar je leert ook reageren op slagen en stoten.
+Als je wat langer aikido doet, wordt je er heel lenig van, en je gaat steviger op je benen staan. Je leert snel reageren en je conditie wordt beter.
+Soms trainen we met ‘wapens’: een houten zwaard, de boken, een stok, de jo of een houten mes, de tanto. Dat doen we niet zo vaak, omdat je dan veel extra ruimte nodig hebt en dan is de zaal al snel te klein. Maar soms is het goed om te oefenen, het lijkt allemaal net iets echter, iets enger misschien wel, zodat je extra goed gaat werken en beter oplet.
+    </Fragment>
+
+  </Content>
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Geschiedenis</h3>
+      In Japan heetten de ridders ‘samoerai’. Het waren belangrijke mannen, je kon niet zomaar samoerai worden. Net als Europese ridders waren de samoerai van adel. Eer, eerlijkheid, moed en trouw, dat vonden ze belangrijk. Al vanaf dat ze kleuters waren leerden ze vechten en paardrijden, maar ook netjes schrijven en hoe je je hoort te gedragen als je bijvoorbeeld bij de keizer op bezoek moet. Veel dingen uit aikido komen hiervandaan: we trainen bijvoorbeeld soms op de knieen - omdat ze in Japan op de grond zaten in huis, en je moet ook leren hoe je je moet verdedigen als je wordt aangevallen tijdens de lunch! Ook schoppen we niet bij aikido. Schoppen, dat hoort bij straatvechten, vond de samoerai. Je laat de ander toch niet je voetzolen zien, die vies zijn van de straat! Als je lang bezig bent met aikido (5 jaar of zo) mag je van je leraar misschien een ‘hakama’ dragen. Dat is een lange zwarte of donkerblauwe broek die je over je judopak aantrekt. Een hakama is heel wijd met allemaal plooien. Als je niet goed kijkt lijkt het wel een rok! Met zo’n hakama zie je er net zo uit als een Japanse ridder!
+    </Fragment>
+
+  </Content>
+
+  <FeaturesList/>
+</Layout>
