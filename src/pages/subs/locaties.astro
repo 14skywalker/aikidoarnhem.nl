@@ -6,20 +6,64 @@ const metadata = {
   title: 'Locaties',
 };
 ---
+
 <Layout metadata={metadata}>
 
-  <Content
-    isReversed
-    image={{
-      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Titel</h3>
-      
-    </Fragment>
-  </Content>
+    <Fragment>
+  
+<script is:inline>
 
-  <FeaturesList/>
+async function initAMap() {
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const amap = new Map(document.getElementById("gmap_a_canvas"), 
+  {
+	zoom:14,
+	center:new google.maps.LatLng(51.9817756,5.97274),
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	mapId: "Arnhem",
+  });
+  const marker = new AdvancedMarkerElement({
+    map: amap,
+    position: { lat:51.9817756, lng: 5.972745 },
+  });
+  infowindow = new google.maps.InfoWindow({content:'<strong>t Luifeltje</strong><br>Dunoweg 2<br>6825 ED Arnhem<br>'});
+  google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+  infowindow.open(map,marker);
+}
+initAMap();
+async function initWMap() {
+  if (window.wmap) return;
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+  const wmap = new Map(document.getElementById("gmap_w_canvas"), 
+  {
+	zoom:14,
+	center:new google.maps.LatLng(51.97455309999999,5.642246500000056),
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	mapId: "Wageningen",
+  });
+  const marker = new AdvancedMarkerElement({
+    map: wmap,
+    position: { lat:51.9738447, lng: 5.6441740999999865 },
+  });
+  infowindow = new google.maps.InfoWindow({content:'<strong>Kenkon</strong><br>Nieuwe kanaal 11<br>6709 PA Wageningen<br>'});
+  google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+  infowindow.open(map,marker);
+}
+initWMap();
+  
+</script>
+
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Locatie Arnhem</h3>
+      <h2><a target='_blank' title='Open in Google maps' style='color: navy;' href="https://www.google.com/maps/@51.9817756,5.972745,19z?hl=nl-NL">'t Luifeltje, Dunoweg 2, 6825 ED Arnhem Presikhaaf</a></h2>
+<div id='gmap_a_canvas' style='height:300px; width:500px;'></div>
+
+      <br/>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Locatie Wageningen</h3>
+      <h2><a target='_blank' title='Open in Google maps' style='color: navy;' href="https://www.google.com/maps/@51.974553,5.642247,17z?hl=nl-NL">Trainingscentrum KenKon, Nieuwe Kanaal 11, 6709 PA Wageningen</a></h2>
+<div id='gmap_w_canvas' style='height:300px; width:500px;'></div>
+
+    </Fragment>
+
 </Layout>
