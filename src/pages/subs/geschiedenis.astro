@@ -1,0 +1,26 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import FeaturesList from '../features.astro';
+const metadata = {
+  title: 'Geschiedenis',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Geschiedenis</h3>
+      Aikido is een Japanse bewegingsvorm ontwikkeld uit traditionele gevechtskunsten, uit vroeger eeuwen. Het doel van die traditionele gevechtskunsten was om in een tijd vol geweld en gevaar een aanval te kunnen overleven en een vijand uit te schakelen. Om dit te bereiken was het niet alleen belangrijk goede technieken uit te kunnen voeren, maar ook de zenuwen te beheersen. Daarom besteedde men zoveel aandacht aan oefeningen om innerlijke rust en harmonie te verkrijgen. Deze oude gevechtskunsten vormen de basis van het huidige aikido. Men probeert nu niet meer een tegenstander te beschadigen, maar zijn aanval te neutraliseren door zijn eigen kracht tegen hem te keren.
+    </Fragment>
+
+  </Content>
+
+  <FeaturesList/>
+</Layout>

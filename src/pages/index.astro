@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { getPermalink } from '~/utils/permalinks';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -12,6 +11,8 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import FeaturesList from './features.astro';
+
 
 const metadata = {
   title: 'Aikidoschool Sankaku Arnhem/Wageningen',
@@ -27,10 +28,10 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Proeflessen',
-        href: '#steps',
+        href: '#proefles',
         icon: 'tabler:download',
       },
-      { text: 'Ontdek meer', href: '#features' },
+      { text: 'Ontdek meer', href: '#voordelen' },
     ]}
     image={{ src: '~/assets/images/hero-image.png', alt: 'Aikido Hero Image' }}
   >
@@ -57,7 +58,7 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
+    id="voordelen"
     tagline="Voordelen"
     title="Dit biedt onze aikidoschool"
     subtitle="Onze Aikido-school biedt een inspirerende omgeving waar je fysieke kracht, mentale balans en zelfvertrouwen ontwikkelt door traditionele technieken en moderne inzichten te combineren. Onder begeleiding van ervaren instructeurs leer je jezelf te verdedigen, harmonie te vinden en sterker in het leven te staan."
@@ -144,7 +145,7 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id="steps"
+    id="proefles"
     title="Ontdek de magische wereld van winnen zonder vechten!"
     items={[
       {
@@ -176,127 +177,68 @@ const metadata = {
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Features list ************** -->
 
-  <Features2
-    title="Meer over aikido"
-    subtitle="Ontdek alles over aikido en onze school."
-    tagline="verder"
-    items={[
-      {
-        title: 'Betekenis',
-        description: "Aikido komt uit Japan; wat betekent het precies?",
-        icon: 'flat-color-icons:graduation-cap',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Geschiedenis',
-        description:
-          "Meer over de oorsprong en de grondlegger van Aikdo.",
-        icon: 'flat-color-icons:film-reel',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Kinderen',
-        description:
-          'Hoe geschikt is deze vechtkunst voor kinderen?',
-        icon: 'flat-color-icons:conference-call',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Leraren',
-        description:
-          "Lees meer over de leraren van onze school.",
-        icon: 'flat-color-icons:business-contact',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Lestijden',
-        description:
-          'Een overzicht van de lestijden voor de verschillende locaties.',
-        icon: 'flat-color-icons:advertising',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Locaties',
-        description: 'Google maps voor onze dojo\'s in Arnhem en Wageningen.',
-        icon: 'flat-color-icons:home',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Inschrijven',
-        description: 'Hier vind je onze pagina met inschrijfformulier.',
-        icon: 'flat-color-icons:voice-presentation',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Lesgeld',
-        description:
-          'We draaien op vrijwilligers en vragen lesgeld voor de zaalhuur en de matten.',
-        icon: 'flat-color-icons:currency-exchange',
-        href: getPermalink('/services')
-      },
-      {
-        title: 'Kalender',
-        description: "Bekijk onze vaste activeiten en extra evenementen.",
-        icon: 'flat-color-icons:calendar',
-        href: getPermalink('/calendar')
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
+  <FeaturesList/>
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogLatestPosts
+  <!-- BlogLatestPosts
     title="Find out more content in our Blog"
     information={`The blog is used to display AstroWind documentation.
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
                         Astro is a very interesting technology. Thanks.
                 `}
-  />
+  /-->
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Veelgestelde vragen"
+    subtitle="Ontdek de antwoorden op deze vragen en leer hoe Aikido je kan helpen bij zelfontwikkeling, innerlijke balans en effectieve zelfverdediging."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
+        {
+    "title": "Wat is Aikido?",
+    "description": "Aikido is een Japanse krijgskunst die gericht is op zelfverdediging zonder de tegenstander schade toe te brengen. Het combineert circulaire bewegingen en technieken om de energie van een aanval om te leiden."
+  },
+  {
+    "title": "Voor wie is Aikido geschikt?",
+    "description": "Aikido is geschikt voor mensen van alle leeftijden en fitnessniveaus. Het richt zich op techniek en innerlijke balans in plaats van fysieke kracht."
+  },
+  {
+    "title": "Is Aikido effectief voor zelfverdediging?",
+    "description": "Ja, Aikido is effectief voor zelfverdediging. Het richt zich op het neutraliseren van aanvallen door gebruik te maken van de kracht en beweging van de aanvaller."
+  },
+  {
+    "title": "Moet ik fit of sterk zijn om Aikido te beoefenen?",
+    "description": "Nee, Aikido vereist geen uitzonderlijke kracht of fitheid. De nadruk ligt op techniek en balans, wat het toegankelijk maakt voor iedereen."
+  },
+  {
+    "title": "Wat heb ik nodig om met Aikido te beginnen?",
+    "description": "Je hebt comfortabele kleding nodig, zoals een trainingsbroek en een T-shirt. Later kun je een gi (traditioneel uniform) aanschaffen."
+  },
+  {
+    "title": "Hoe verschilt Aikido van andere krijgskunsten?",
+    "description": "In tegenstelling tot veel andere krijgskunsten richt Aikido zich op harmonie en het vermijden van confrontatie. Het is niet competitief en streeft naar het minimaliseren van geweld."
+  },
+  {
+    "title": "Hoe vaak moet ik trainen om vooruitgang te boeken?",
+    "description": "Dit hangt af van je persoonlijke doelen, maar meestal wordt 2-3 keer per week trainen aanbevolen om vooruitgang te zien."
+  },
+  {
+    "title": "Is er een rangsysteem in Aikido?",
+    "description": "Ja, Aikido gebruikt een rangsysteem met gekleurde banden voor beginners (kyu-rangen) en zwarte banden voor gevorderden (dan-rangen)."
+  },
+  {
+    "title": "Kan ik Aikido beoefenen als ik lichamelijke beperkingen heb?",
+    "description": "Ja, Aikido kan vaak worden aangepast aan individuele behoeften. Bespreek eventuele beperkingen met je instructeur om een passende aanpak te vinden."
+  },
+  {
+    "title": "Hoe lang duurt het om een zwarte band in Aikido te behalen?",
+    "description": "Het behalen van een zwarte band kan 5-10 jaar duren, afhankelijk van je toewijding, trainingsfrequentie en vooruitgang."
+  }
     ]}
   />
 
@@ -318,7 +260,7 @@ const metadata = {
       {
         variant: 'primary',
         text: 'Start nu',
-        href: '#steps',
+        href: '#proefles',
         icon: 'tabler:download',
       },
     ]}

@@ -1,0 +1,235 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Aanmelden',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Aanmelden"
+  >
+    <Fragment slot="subtitle">
+    Als je wil starten, vragen we je het online inschrijf formulier in te vullen. Dit Google formulier vind je door hieronder 'Nu inschrijven' te kiezen.
+    </Fragment>
+  </HeroText>
+
+  <!-- Pricing Widget ******************* -->
+
+  <Prices
+    id="lesgeld"
+    title="Het lesgeld"
+    subtitle="Onze school draait helemaal op vrijwilligers. Hierdoor kunnen we de kosten laag houden."
+    prices={[
+      {
+        title: 'proefles',
+        subtitle: 'Check of we een klik hebben',
+        price: "0",
+        period: '1 of 2 keer',
+        items: [
+          {
+            description: 'Vrijblijvend',
+          },
+          {
+            description: 'Opgeven niet nodig',
+          },
+          {
+            description: 'Geen speciale kleding nodig',
+          },
+        ],
+        callToAction: {
+          text: 'Zie lestijden',
+          href: '/subs/lestijden',
+        },
+      },
+      {
+        title: 'Basis',
+        subtitle: 'Ideaal om te beginnen of naast andere sporten',
+        price: "25,-",
+        period: 'Per maand',
+        items: [
+          {
+            description: '1 keer per week',
+          },
+          {
+            description: '€300,- per jaar',
+          },
+          {
+            description: 'Arnhem: maandag, donderdag',
+          },
+          {
+            description: 'Wageningen: dinsdag, vrijdag',
+          },
+        ],
+        callToAction: {
+          text: 'Nu inschrijven',
+          href: '/landing/inschrijven',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'populair',
+      },
+      {
+        title: 'Premium',
+        subtitle: 'Voor als aikido je gegrepen heeft',
+        price: "37,50",
+        period: 'Per maand',
+        items: [
+          {
+            description: '2 of meer keer per week',
+          },
+          {
+            description: '€450,- per jaar',
+          },
+          {
+            description: 'Arnhem: maandag, donderdag',
+          },
+          {
+            description: 'Wageingen: dinsdag, vrijdag',
+          },
+        ],
+        callToAction: {
+          text: 'Nu inschrijven',
+          href: '/landing/inschrijven',
+        },
+      },
+    ]}
+  />
+
+    <Prices
+    title=""
+    prices={[
+      {
+        title: 'Kinderen',
+        subtitle: 'van 8 tot 11 jaar',
+        price: "18,50",
+        period: 'Per maand',
+        items: [
+          {
+            description: '1 keer per week',
+          },
+          {
+            description: '€220,- per jaar',
+          },
+          {
+            description: 'Arnhem: donderdag',
+          },
+          {
+            description: 'Wageningen: woensdag',
+          },
+        ],
+        callToAction: {
+          text: 'Nu inschrijven',
+          href: '/landing/inschrijven',
+        },
+      },
+        {
+        title: 'Jeugd',
+        subtitle: 'van 12 tot 17 jaar',
+        price: "20,-",
+        period: 'Per maand',
+        items: [
+          {
+            description: '1 keer per week',
+          },
+          {
+            description: '€240,- per jaar',
+          },
+          {
+            description: 'Arnhem: donderdag',
+          },
+          {
+            description: 'Wageningen: woensdag',
+          },
+        ],
+        callToAction: {
+          text: 'Nu inschrijven',
+          href: '/landing/inschrijven',
+        },
+      },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Meer over lesgeld"
+    subtitle=""
+    columns={2}
+    items={[
+      {
+        title: 'Periodieke overboeking',
+        description: 'We vragen deelnemers, zelf een periodieke overboeking te regelen met de bank. Zo betaal je nooit te laat, maar houd je wel zelf controle over je geldzaken.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Rekeningnummer',
+        description: 'Contributie moet worden overgemaakt op Triodos rekeningnummer NL74 TRIO 0786 7914 11 tnv Stichting Sankaku te Arnhem',
+        icon: 'tabler:shopping-cart',
+      },
+      {
+        title: 'Naar premium',
+        description: 'Train je vaker dan 1 keer per week, pas dan gewoon zelf je periodieke overboeking aan. En omgekeerd natuurlijk ook!',
+        icon: 'tabler:chevrons-up',
+      },
+      {
+        title: 'Flexibel',
+        description: 'Kan je niet op je vaste lestijd? Kies gerust een andere dag om te trainen.',
+        icon: 'tabler:users',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Lesgeld FAQ"
+    subtitle=""
+    columns={1}
+    items={[
+      {
+        title: 'Kan ik per maand betalen?',
+        description:
+          'We vinden het prettig als je per jaar betaald want dat houdt onze administratie eenvoudig. Als dit een probleem voor je is, betaal dan gerust per maand.',
+      },
+      {
+        title: 'Wat is de opzegtermijn?',
+        description:
+          "We hanteren een opzegtermijn van 1 maand. We zullen teveel betaald lesgeld naar je terugstorten.",
+      },
+      {
+        title: 'Hoe wissel ik van basis naar premium of terug?',
+        description:
+          'Pas hiervoor zelf je periodieke overboeking aan. Fijn als je het even meldt bij de lesgever.',
+      },
+      {
+        title: 'Kunnen jullie het lesgeld bij mij incasseren?',
+        description:
+          'Helaas hebben we hier op dit moment geen mogelijkheid voor. Banken rekenen hiervoor behoorlijke kosten die we liever aan jullie teruggeven.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Klaar om aikido te ondekken?"
+    subtitle="Sluit je aan bij onze groep van enthousiaste aikidoka's en transformeer naar vrede."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ga ervoor!',
+        href: '/',
+      },
+    ]}
+  />
+</Layout>
