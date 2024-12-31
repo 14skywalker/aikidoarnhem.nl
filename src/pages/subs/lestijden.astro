@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
 import FeaturesList from '../features.astro';
 const metadata = {
   title: 'Lestijden',
@@ -9,17 +10,137 @@ const metadata = {
 <Layout metadata={metadata}>
 
   <Content
-    isReversed
     image={{
       src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
       alt: 'Colorful Image',
     }}
+        items={[
+      {
+        icon: 'tabler:calendar',
+        title:
+          'Maandag 20:15-21:45 Volwassenen',
+        callToAction: {
+          text: 'Door Sabine',
+          href: 'mailto:sabine@aikidoarnhem.nl',
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        title:
+          'Donderdag 18:30-19:30 Jeugd',
+        description: '8 tot 15 jaar',
+        callToAction: {
+          text: 'Door Pimm',
+         
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        title:
+          'Donderdag 19:00-20:30 Volwassenen',
+        callToAction: {
+          text: 'Door Edy',
+          href: 'mailto:edy@aikidoarnhem.nl',
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        description: 'Check de kalender voor uitzonderingen',
+        title:
+          'Zondagen 09:30-11:30 Gevorderden',
+        callToAction: {
+          text: 'Door Edy',
+          href: 'mailto:edy@aikidoarnhem.nl',
+        },
+      },
+      ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Titel</h3>
-      
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Lestijden Arnhem</h3>
     </Fragment>
-  </Content>
+</Content>
 
-  <FeaturesList/>
+<Content
+  isReversed
+    image={{
+      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
+      alt: 'Colorful Image',
+    }}
+        items={[
+      {
+        icon: 'tabler:calendar',
+        title:
+          'Dinsdag 17:30-19:00 Volwassenen',
+        callToAction: {
+          text: 'Door Edy en Yvon',
+          href: 'mailto:edy@aikidoarnhem.nl',
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        description: '8 tot 12 jaar',
+        title:
+          'Woensdag 16:45-17:45 Kinderen',
+        callToAction: {
+          text: 'Door Jeroen',
+          href: 'mailto:jeroen@aikidoarnhem.nl',
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        description: '12 tot 17 jaar',
+        title:
+          'Woensdan 18:00-19:00 Jeugd',
+        callToAction: {
+          text: 'Door Jeroen',
+          href: 'mailto:jeroen@aikidoarnhem.nl',
+        },
+      },
+      {
+        icon: 'tabler:calendar',
+        description: '',
+        title:
+          'Vrijdag 19:45-21:15 Volwassenen',
+        callToAction: {
+          text: 'Door Eltje',
+          href: 'mailto:eltje@aikidoarnhem.nl',
+        },
+      },
+      ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Lestijden Wageningen</h3>
+    </Fragment>
+</Content>
+
+  <Features
+    title="Vakanties"
+    items={[
+      {
+        title: 'Arnhem kinderen/jeugd',
+        description:
+          'Er zijn geen jeugd en kinderlessen tijdens de basisschool-vakantie in regio zuid Nederland.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Wageningen kinderen/jeugd',
+        description:
+          'Er zijn geen jeugd en kinderlessen tijdens de basisschool-vakantie in regio midden Nederland.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Arnhem zomer',
+        description:
+          'Er zijn geen lessen binnen tijdens de basisschool zomervakantie in regio zuid Nederland hebben.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Wageningen zomer',
+        description:
+          'Er zijn geen lessen binnen tijdens de basisschool zomervakantie in regio midden Nederland. In die periode zijn er wel elke dinsdag wapenlessen buiten in het Belmonte Arboretum van 18:00 - 19:30.',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
 </Layout>
