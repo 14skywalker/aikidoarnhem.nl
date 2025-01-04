@@ -11,15 +11,15 @@ export const headerData = {
         },
         {
           text: 'Lestijden',
-          href: getPermalink('/subs/lestijden'),
+          href: getPermalink('/p/lestijden'),
         },
         {
           text: 'Locaties',
-          href: getPermalink('/subs/locaties'),
+          href: getPermalink('/p/locaties'),
         },
         {
           text: 'Leraren',
-          href: getPermalink('/subs/leraren'),
+          href: getPermalink('/p/leraren'),
         },
       ],
     },
