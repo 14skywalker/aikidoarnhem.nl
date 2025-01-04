@@ -32,7 +32,7 @@ const {
         containerClass
       )}
     >
-      {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
+      {items.map(({ title, pretitle, description, icon, callToAction, classes: itemClasses = {} }) => (
         <div class="intersect-once motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade">
           <div class={twMerge('flex flex-row max-w-md', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">
@@ -44,15 +44,16 @@ const {
               )}
             </div>
             <div class="mt-0.5">
-              {title && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
+              {pretitle && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}><pre class="inline">{pretitle}</pre>{title}</h3>}
+              {title && !pretitle && <h3 class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</h3>}
               {description && (
                 <p
-                  class={twMerge(`${title ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}
+                  class={twMerge(`${title || pretitle ? 'mt-3' : ''} text-muted`, descriptionClass, itemClasses?.description)}
                   set:html={description}
                 />
               )}
               {callToAction && (
-                <div class={twMerge(`${title || description ? 'mt-3' : ''}`, actionClass, itemClasses?.actionClass)}>
+                <div class={twMerge(`${title || pretitle || description ? 'mt-3' : ''}`, actionClass, itemClasses?.actionClass)}>
                   <Button variant="link" {...callToAction} />
                 </div>
               )}

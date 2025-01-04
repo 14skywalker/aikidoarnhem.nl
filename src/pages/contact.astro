@@ -12,66 +12,45 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Laten we kennismaken!">
+    <Fragment slot="subtitle">
+      Mail voor meer informatie naar: <a href="mailto:aikido@aikidoarnhem.nl">aikido@aikidoarnhem.nl</a>. De email adressen van de leraren zijn te vinden op de leraren pagina.
+    </Fragment>
+  </HeroText>
 
-  <ContactUs
-    id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
-    }}
-    description="Our support team typically responds within 24 business hours."
-  />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="We zijn hier om te helpen!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Algemene vragen',
+        description: 'Onderaan op onze homepagina is een FAQ opgenomen. Mail ons gerust als je vraag daar niet tussen staat.',
       },
       {
-        title: 'Contact sales',
+        title: 'Lesgeld',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Op onze aanmeldpagina staat alles over de kosten uitgelegd. We helpen je graag verder als je hier vragen over hebt.',
       },
       {
-        title: 'Technical support',
+        title: 'Lesinhoud',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Als je vragen hebt over de inhoud van de lessen kan je het beste met de lesgever contact opnemen. Zij maken voor of na de les hiervoor graag ruimte!',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
+        title: 'Telefonisch',
+        description: 'niet bereikbaar',
         icon: 'tabler:headset',
       },
       {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'aikido@aikidoarnhem.nl',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Locatie',
+        description: `'t Luifeltje, Dunoweg 2, 6825 ED Arnhem Presikhaaf`,
         icon: 'tabler:map-pin',
       },
     ]}

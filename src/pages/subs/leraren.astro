@@ -9,17 +9,97 @@ const metadata = {
 <Layout metadata={metadata}>
 
   <Content
-    isReversed
-    image={{
-      src: '~/assets/images/side-view-male-martial-arts-instructor-training-practice-hall-with-trainee.jpg',
-      alt: 'Colorful Image',
-    }}
+    items={[
+      {
+        icon: 'tabler:user',
+        title: 'Edy Kamalski / 6e dan / Leraar B',
+        callToAction: {
+          text: 'Mail Edy',
+          href: 'mailto:edy@aikidoarnhem.nl',
+          icon: 'tabler:mail'
+        },
+      },
+      {
+        icon: 'tabler:user',
+        title: 'Yvon / 4e dan / Leraar B',
+        callToAction: {
+          text: 'Mail Yvon',
+          href: 'mailto:yvon@aikidoarnhem.nl',
+          icon: 'tabler:mail'
+        },
+      },
+      {
+        icon: 'tabler:user',
+        title: 'Sabine Lebenstedt / 3e dan / Leraar B',
+        callToAction: {
+          text: 'Mail Sabine',
+          href: 'mailto:sabine@aikidoarnhem.nl',
+          icon: 'tabler:mail'
+        },
+      },
+      {
+        icon: 'tabler:user',
+        title: 'Eltje Boons / 1e dan / Leraar A',
+        callToAction: {
+          text: 'Mail Eltje',
+          href: 'mailto:eltje@aikidoarnhem.nl',
+          icon: 'tabler:mail'
+        },
+      }, 
+     {
+        icon: 'tabler:user',
+        title: 'Pimm / 1e dan / Assistent',
+      },
+      {
+        icon: 'tabler:user',
+        title: 'Jeroen Visscher / 3e dan / Leraar A',
+        callToAction: {
+          text: 'Mail Jeroen',
+          href: 'mailto:jeroen@aikidoarnhem.nl',
+          icon: 'tabler:mail'
+        },
+      },
+    ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Titel</h3>
-      
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Leraren</h3>
+      Deze instructeurs zijn verbonden aan Stichting Sankaku. Allen zijn rijksgediplomeerd.
     </Fragment>
-  </Content>
+</Content>
 
-  <FeaturesList/>
+<Content
+    image={{
+      src: '~/assets/images/irimi200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Nooit uitgeleerd</h3>
+      Alle leraren van Sankaku blijven zelf ook nog lessen volgen, soms in Nederland, maar ook in het buitenland. Hierdoor verbeteren ze niet alleen hun eigen lesgevercapaciteiten, maar blijven ze ook op de hoogte van alle ontwikkelingen binnen het aikido.
+Leraren van de leraren zijn: Tamura-sensei, Sugano-sensei, Tony Smibert, Carel Zappey, Pierre Geraedts, Claude Pellerin en Toshiro Suga.
+    </Fragment>
+</Content>
+
+<Content
+ isReversed
+    image={{
+      src: '~/assets/images/ikkyo200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}
+    items={[
+      {
+        callToAction: {
+          text: 'Download gedragscode',
+          href: 'https://dxyxhgylzfhzl.cloudfront.net/5.04-Gedragscode-JBN-leerkrachten_180614_130003.pdf?v=1528974003',
+          target: '_blank',
+          icon: 'tabler:download'
+        },
+      }]}>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Gedragscode</h3>
+      Voor al onze leraren en vrijwilligers hanteren we de gedragscode van de JBN. Wij nemen alleen vrijwilligers aan uit ons eigen ledenbestand. De leraren van de stichting beslissen in onderling overleg of iemand geschikt lijkt voor de taak. Voor alle leraren en vrijwilligers wordt vanaf juni 2020 elke 5 jaar een VOG (Verklaring omtrent gedrag) aangevraagd.
+    </Fragment>
+</Content>
+
+
+
 </Layout>

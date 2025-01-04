@@ -1,6 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Steps from '~/components/widgets/Steps.astro';
@@ -188,6 +189,14 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
+
+  <!-- nice image -->
+  
+    <Hero
+    image={{ 
+      src: 'https://images.unsplash.com/photo-1618676156034-df5979d43c7a?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
+      alt: 'Aikido Hero Image'
+       }} />
 
   <!-- FAQs Widget ******************* -->
 
