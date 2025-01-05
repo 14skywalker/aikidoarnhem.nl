@@ -1,0 +1,69 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import { getPermalink } from '~/utils/permalinks';
+import HeroText from '~/components/widgets/HeroText.astro';
+
+const metadata = {
+  title: 'Ledennieuws',
+};
+---
+<Layout metadata={metadata}>
+
+  <HeroText title="Ledennieuws">
+    <Fragment slot="subtitle">
+    Aansluit nummer JBN: 06-228
+    </Fragment>
+  </HeroText>
+
+  <Content
+    image={{
+      src: '~/assets/images/irimi200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}
+    items={[
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Vaardigheidseisen_danexamen_aikido',
+          href: '/pdfs/dan/vaardigheidseisen_danexamen_aikido.pdf',
+          target: '_blank',
+        },
+      }]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Examens eisen eerste tot en met vierde dan</h3>
+      In Vaardigheidseisen_danexamen_aikido.pdf vind je de dan examenrichtlijnen opgesteld door de Nationale Graden Commissie Aikido (28 aplril 2004).
+      De technische eisen zijn in overeenstemming met de nationale methode. Hiertoe kan het boek van Nobuyoshi Tamura, L'aikido, méthode nationale (Aikido, de nationale methode) als leidraad dienen.
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    image={{
+      src: '~/assets/images/ikkyo200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}
+    items={[
+      {
+        icon: 'tabler:mail',
+        callToAction: {
+          text: 'Discussiegroep',
+          href: 'https://groups.google.com/g/aikidoarnhem',
+        },
+      },
+      {
+        icon: 'tabler:mail',
+        callToAction: {
+          text: 'Mail Edy',
+          href: 'mailto:edy@aikidoarnhem.nl',
+        },
+      }]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Discussiegroep</h3>
+Hieronder is de link naar de discussie groep. De discussie groep is alleen voor toegankelijk voor leden van Sankaku.
+Wil je wel lid worden, maar vindt je het moeilijk om een account aan te maken. Stuur Edy een mail en hij regelt dit voor je.
+    </Fragment>
+  </Content>
+</Layout>

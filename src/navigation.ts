@@ -44,28 +44,77 @@ export const headerData = {
         },
       ],
     },
+    // {
+    //   text: 'Blogs',
+    //   links: [
+    //     {
+    //       text: 'Blog List',
+    //       href: getBlogPermalink(),
+    //     },
+    //     {
+    //       text: 'Article',
+    //       href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+    //     },
+    //     {
+    //       text: 'Article (with MDX)',
+    //       href: getPermalink('markdown-elements-demo-post', 'post'),
+    //     },
+    //     {
+    //       text: 'Category Page',
+    //       href: getPermalink('tutorials', 'category'),
+    //     },
+    //     {
+    //       text: 'Tag Page',
+    //       href: getPermalink('astro', 'tag'),
+    //     },
+    //   ],
+    // },
     {
       text: 'Ledeninfo',
       links: [
         {
-          text: 'Blog List',
-          href: getBlogPermalink(),
+          text: 'Ledennieuws',
+          href: getPermalink('/p/ledennieuws'),
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
+          text: 'Kalender',
+          href: getPermalink('/p/kalender'),
         },
         {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
+          text: 'Kalender full screen',
+          href: "https://www.google.com/calendar/embed?showTitle=0&hl=nl&height=600&wkst=2&bgcolor=%23FFFFFF&src=aikidoarnhem%40gmail.com&color=%232952A3&src=arn6ku55bk2ruab49tqtioeb6s%40group.calendar.google.com&color=%23125A12&ctz=Europe%2FAmsterdam"
         },
         {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
+          text: 'Discussiegroep',
+          href: 'https://groups.google.com/g/aikidoarnhem',
         },
         {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
+          text: 'Kyu en Dangraad eisen',
+          href: getPermalink('/p/vereisten'),
+        },
+        {
+          text: 'Leraren',
+          href: getPermalink('/p/leraren'),
+        },
+        {
+          text: 'Lesgeld',
+          href: getPermalink('/aanmelden#lesgeld'),
+        },
+        {
+          text: 'Lestijden',
+          href: getPermalink('/p/lestijden'),
+        },
+        {
+          text: 'Locaties',
+          href: getPermalink('/p/locaties'),
+        },
+        {
+          text: 'Wijzigingsformulier',
+          href: getPermalink('/landing/inschrijven'),
+        },
+        {
+          text: 'Opzegformulier',
+          href: getPermalink('/landing/opzeggen'),
         },
       ],
     },

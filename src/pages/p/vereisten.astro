@@ -1,0 +1,169 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import FeaturesList from '../features.astro';
+const metadata = {
+  title: 'Vereisten',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content
+    image={{
+      src: '~/assets/images/sumio200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}
+    items={[
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Zesde kyu',
+          href: '/kyu/kyu6.php.html',
+          target: '_blank',
+        },
+      },      
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Vijfde kyu',
+          href: '/kyu/kyu5.php.html',
+          target: '_blank',
+        },
+      },      
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Vierde kyu',
+          href: '/kyu/kyu4.php.html',
+          target: '_blank',
+        },
+      },      
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Derde kyu',
+          href: '/kyu/kyu3.php.html',
+          target: '_blank',
+        },
+      },      
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Tweede kyu',
+          href: '/kyu/kyu2.php.html',
+          target: '_blank',
+        },
+      },
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Eerste kyu',
+          href: '/kyu/kyu1.php.html',
+          target: '_blank',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Kyu graad eisen</h3>
+      Links (opent een nieuw window!) naar de kyu graad eisen.
+    </Fragment>
+</Content>
+
+<Content
+ isReversed
+    image={{
+      src: '~/assets/images/ikkyo200.jpg',
+      alt: 'Zwart/wit aikido techniek',
+    }}
+    items={[
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Kyu-Examenrichtlijnen-aikido.pdf',
+          href: '/pdfs/Kyu-Examenrichtlijnen-aikido.pdf',
+          target: '_blank',
+        },
+      }]}>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Kyu eisen van Tamura sensei</h3>
+      In Kyu-Examenrichtlijnen-aikido.pdf vind je de kyu examenrichtlijnen opgesteld door de Nationale Graden Commissie Aikido (16 augustus 1997).
+      De technische eisen zijn in overeenstemming met de nationale methode. Hiertoe kan het boek van Nobuyoshi Tamura, L'aikido, méthode nationale (Aikido, de nationale methode) als leidraad dienen.
+    </Fragment>
+</Content>
+
+ <Content
+    items={[
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido principes beoordlingsformulier',
+          href: '/pdfs/dan/aikido-principes.pdf',
+          target: '_blank',
+        },
+      },      
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Vaardigheidseisen_danexamen_aikido',
+          href: '/pdfs/dan/vaardigheidseisen_danexamen_aikido.pdf',
+          target: '_blank',
+        },
+      },
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido dan graad curriculum',
+          href: '/pdfs/dan/aikido_dan-graad_curriculum.pdf',
+          target: '_blank',
+        },
+      },
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido technieken 1e dan - shodan (1/2)',
+          href: '/pdfs/dan/aikido_technieken_1dan_shodan_1.pdf',
+          target: '_blank',
+        },
+      },
+      {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido technieken 1e dan - shodan (2/2)',
+          href: '/pdfs/dan/aikido_technieken_1dan_shodan_2.pdf',
+          target: '_blank',
+        },
+      },
+            {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido technieken 2e dan - nidan',
+          href: '/pdfs/dan/aikido_technieken_2dan_nidan.pdf',
+          target: '_blank',
+        },
+      },
+            {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido technieken 3e dan - sandan',
+          href: '/pdfs/dan/aikido_technieken_3dan_sandan.pdf',
+          target: '_blank',
+        },
+      },
+            {
+        icon: 'tabler:download',
+        callToAction: {
+          text: 'Aikido technieken 4e dan - yondan',
+          href: '/pdfs/dan/aikido_technieken_4dan_yondan.pdf',
+          target: '_blank',
+        },
+      },
+      ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Dan graad eisen</h3>
+      De lijst van exameneisen zoals ze gevraagd kunnen worden (opent een nieuw window!).
+    </Fragment>
+</Content>
+
+</Layout>
