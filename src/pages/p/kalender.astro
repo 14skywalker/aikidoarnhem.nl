@@ -1,0 +1,49 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+import Button from '~/components/ui/Button.astro';
+
+const metadata = {
+  title: 'Kalender',
+};
+---
+<Layout metadata={metadata}>
+
+  <Content>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2 inline">Kalender</h3>
+      <Button 
+        variant='link' 
+        class='float-end'
+        text='volledig scherm'
+        icon='tabler:arrows-maximize' 
+        href="https://www.google.com/calendar/embed?showTitle=0&hl=nl&height=600&wkst=2&bgcolor=%23FFFFFF&src=aikidoarnhem%40gmail.com&color=%232952A3&src=arn6ku55bk2ruab49tqtioeb6s%40group.calendar.google.com&color=%23125A12&ctz=Europe%2FAmsterdam"
+        />
+
+      <div class="mt-8" style="height:600px;">
+        <iframe
+        src="https://www.google.com/calendar/embed?showTitle=0&hl=nl&height=600&wkst=2&bgcolor=%23FFFFFF&mode=AGENDA&showNav=1&showDate=0&showPrint=0&showTabs=0&src=aikidoarnhem%40gmail.com&color=%232952A3&src=arn6ku55bk2ruab49tqtioeb6s%40group.calendar.google.com&color=%23125A12&ctz=Europe%2FAmsterdam"
+          class="block md:hidden w-full h-full"
+        >
+        </iframe>
+        <iframe
+        src="https://www.google.com/calendar/embed?showTitle=0&hl=nl&height=600&wkst=2&bgcolor=%23FFFFFF&mode=WEEK&showNav=1&s&src=aikidoarnhem%40gmail.com&color=%232952A3&src=arn6ku55bk2ruab49tqtioeb6s%40group.calendar.google.com&color=%23125A12&ctz=Europe%2FAmsterdam"
+          class="hidden md:block lg:hidden w-full h-full"
+        >
+        </iframe>
+        <iframe 
+          src="https://www.google.com/calendar/embed?showTitle=0&hl=nl&height=600&wkst=2&bgcolor=%23FFFFFF&src=aikidoarnhem%40gmail.com&color=%232952A3&src=arn6ku55bk2ruab49tqtioeb6s%40group.calendar.google.com&color=%23125A12&ctz=Europe%2FAmsterdam" 
+          class="hidden lg:block w-full h-full"
+          >
+        </iframe>
+      <div>
+      <pre>
+      
+Legenda:
+Blauw:  Sankaku evenement
+Groen:  Aikido evenement
+</pre>
+    </Fragment>
+  </Content>
+
+</Layout>
