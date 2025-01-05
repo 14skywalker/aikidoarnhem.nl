@@ -144,6 +144,7 @@ export const footerData = {
         { text: 'Missie', href: '/missie' },
         { text: 'AVG', href: '/privacy' },
         { text: 'Contact', href: '/contact' },
+        { text: 'Licenties', href: '/licences' },
       ],
     },
   ],
@@ -153,7 +154,7 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Google groups', icon: 'tabler:brand-google', href: 'https://groups.google.com/g/aikidoarnhem' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
+//    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
   ],
   footNote: `Stichting Sankaku - alle rechten voorbehouden`,
 };
