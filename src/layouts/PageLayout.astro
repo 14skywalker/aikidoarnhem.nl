@@ -16,17 +16,17 @@ const { metadata } = Astro.props;
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showRssFeed showToggleTheme position=left />
+    <Header {...headerData} isSticky doNotshowRssFeed showToggleTheme position=left />
   </slot>
   <main>
     <div class="flex flex-row">
-      <div class="hidden md:block mx-8">
+      <div class="mx-8 hidden md:block">
         <div class="sticky top-20">
           <SideLogo class="hidden dark:block" fill="white" />
           <SideLogo class="block dark:hidden" fill="navy" />
         </div>
       </div>
-      <div>
+      <div class="grow">
         <slot />
       </div>
     </div>
